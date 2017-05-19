@@ -18,10 +18,10 @@ public class PointDistance {
         p1.y=0;
         p2.y=20;*/
 
-        System.out.println("Расстояние между точками p1 и p2 = " + p1.distance(p1, p2));
-        System.out.println("Расстояние между точками p3 и p4 = " + p3.distance(p3, p4));
-        System.out.println("Расстояние между точками p2 и p4 = " + p2.distance(p2, p4));
-        System.out.println("Расстояние между точками p5 и p6 = " + p6.distance(p5, p6));
+        System.out.println("Расстояние между точками p1 и p2 = " + p1.distance(p2));
+        System.out.println("Расстояние между точками p3 и p4 = " + p3.distance(p4));
+        System.out.println("Расстояние между точками p2 и p4 = " + p2.distance(p4));
+        System.out.println("Расстояние между точками p5 и p6 = " + p5.distance(p6));
         /*public static double distance(Point p1, Point p2) {
             return Math.sqrt((p2.x-p1.x)*(p2.x-p1.x) + (p2.y-p1.y)*(p2.y-p1.y));
         }*/
