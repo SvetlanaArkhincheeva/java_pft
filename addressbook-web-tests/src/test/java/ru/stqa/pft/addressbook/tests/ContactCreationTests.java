@@ -1,4 +1,4 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.tests;
 
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.BeforeMethod;
@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.*;
+import ru.stqa.pft.addressbook.model.ContactData;
+import ru.stqa.pft.addressbook.appmanager.ApplicationManager;
 
 public class ContactCreationTests {
     FirefoxDriver wd;
@@ -79,5 +81,38 @@ public class ContactCreationTests {
         } catch (NoAlertPresentException e) {
             return false;
         }
+    }
+
+    public static class GroupDeletionTests extends TestBase {
+
+        @Test
+        public void testGroupDeletion() {
+
+            app.getNavigationHelper().gotoGroupPage();
+            app.getGroupHelper().selectGroup();
+            app.getGroupHelper().deleteSelectedGroups();
+            app.getGroupHelper().returnToGroupPage();
+        }
+
+
+    }
+
+    /**
+     * Created by Администратор on 20.05.2017.
+     */
+    public static class TestBase {
+
+        protected final ApplicationManager app = new ApplicationManager();
+
+        @BeforeMethod
+        public void setUp() throws Exception {
+            app.init();
+        }
+
+        @AfterMethod
+        public void tearDown() {
+            app.stop();
+        }
+
     }
 }
