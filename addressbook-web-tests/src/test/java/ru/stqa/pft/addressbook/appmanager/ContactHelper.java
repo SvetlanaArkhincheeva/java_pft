@@ -1,12 +1,8 @@
 package ru.stqa.pft.addressbook.appmanager;
 
-import jdk.nashorn.internal.objects.NativeArguments;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.ContactData;
-
-import java.lang.annotation.Native;
 
 import static org.testng.Assert.assertTrue;
 
@@ -38,7 +34,15 @@ public class ContactHelper extends HelperBase {
     public void deleteSelectedContacts() {
         click(By.xpath("//input[@value='Delete']"));
         wd.switchTo().alert().accept();
-        //assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
 
     }
+
+    public void initContactModification() {
+        click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]"));
+    }
+
+    public void submitContactModification() {
+        click(By.xpath("//div[@id='content']/form[1]/input[22]"));
+    }
+
 }

@@ -13,7 +13,6 @@ public class ApplicationManager {
     private ContactHelper contactHelper;
     private SessionHelper sessionHelper;
 
-
     public void init() {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -30,10 +29,7 @@ public class ApplicationManager {
         wd.quit();
     }
 
-    public GroupHelper getGroupHelper() {
-
-        return groupHelper;
-    }
+    public GroupHelper getGroupHelper() {return groupHelper;}
 
     public ContactHelper getContactHelper() {
         return contactHelper;
@@ -42,4 +38,6 @@ public class ApplicationManager {
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
+
+    public SessionHelper getSessionHelper() {return sessionHelper; }
 }
