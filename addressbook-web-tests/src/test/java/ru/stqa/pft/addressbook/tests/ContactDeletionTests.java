@@ -1,16 +1,15 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.tests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class ContactDeletionTests extends TestBase{
+public class ContactDeletionTests extends TestBase {
 
     @Test
     public void testContactDeletion() {
         //wd.findElement(By.linkText("home")).click();
         //gotoContactPage();
-        selectContact();
-        deleteSelectedContacts();
+        app.getContactHelper().selectContact();
+        app.getContactHelper().deleteSelectedContacts();
 
 
     }
