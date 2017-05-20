@@ -35,26 +35,10 @@ public class ContactHelper extends HelperBase {
         click(By.name("selected[]"));
     }
 
-    private boolean acceptNextAlert = true;
-
-    private String closeAlertAndGetItsText() {
-        try {
-            Alert alert = wd.switchTo().alert();
-            String alertText = alert.getText();
-            if (acceptNextAlert) {
-                alert.accept();
-            } else {
-                alert.dismiss();
-            }
-            return alertText;
-        } finally {
-            acceptNextAlert = true;
-        }
-    }
-
     public void deleteSelectedContacts() {
         click(By.xpath("//input[@value='Delete']"));
-        assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
+        wd.switchTo().alert().accept();
+        //assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
 
     }
 }
