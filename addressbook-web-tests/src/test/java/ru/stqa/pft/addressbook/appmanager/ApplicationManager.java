@@ -7,6 +7,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 
+
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -25,18 +27,18 @@ public class ApplicationManager {
 
 
     public void init() {
-        String browser = BrowserType.FIREFOX;
-        if (browser == BrowserType.FIREFOX) {
-            wd = new FirefoxDriver();
-        } else if (browser == BrowserType.CHROME) {
+
+        if (Objects.equals(browser, BrowserType.FIREFOX)) {
+            wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
+        } else if (Objects.equals(browser, BrowserType.CHROME)) {
             wd = new ChromeDriver();
-        } else if (browser == BrowserType.IEXPLORE) {
+        } else if (Objects.equals(browser, BrowserType.IEXPLORE)) {
             wd = new InternetExplorerDriver();
         }
 
-        wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
+
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        wd.get("http://localhost/addressbook/addressbook");
+        wd.get("http://localhost/addressbook");
         groupHelper = new GroupHelper(wd);
         contactHelper = new ContactHelper(wd);
         navigationHelper = new NavigationHelper(wd);
