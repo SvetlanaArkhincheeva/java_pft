@@ -53,6 +53,7 @@ public class GroupHelper extends HelperBase {
     }
 
     public boolean isThereGroup() {
-return isElementPresent((By.name("selected[]")));
+        return isElementPresent((By.name("selected[]")));
     }
+
 }
