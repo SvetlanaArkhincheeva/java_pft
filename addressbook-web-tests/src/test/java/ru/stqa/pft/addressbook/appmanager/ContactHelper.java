@@ -46,7 +46,6 @@ public class ContactHelper extends HelperBase {
     public void deleteSelectedContacts() {
         click(By.xpath("//input[@value='Delete']"));
         wd.switchTo().alert().accept();
-
     }
 
     public void initContactModification() {
@@ -66,7 +65,6 @@ public class ContactHelper extends HelperBase {
     public boolean isThereContact() {
         return isElementPresent((By.name("selected[]")));
     }
-
 }
 
 
