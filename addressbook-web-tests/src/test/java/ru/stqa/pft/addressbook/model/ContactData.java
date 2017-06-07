@@ -16,13 +16,13 @@ public class ContactData {
         this.id = id;
     }
 
-    public ContactData(String firstname, String lastname, String phonenumber, String email, String group) {
-        this.id = null;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.phonenumber = phonenumber;
-        this.email = email;
-        this.group = group;
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "id='" + id + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
     }
 
     @Override
@@ -32,24 +32,26 @@ public class ContactData {
 
         ContactData that = (ContactData) o;
 
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null) return false;
         return lastname != null ? lastname.equals(that.lastname) : that.lastname == null;
     }
 
     @Override
     public int hashCode() {
-        int result = firstname != null ? firstname.hashCode() : 0;
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
         result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
         return result;
     }
 
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "id='" + id + '\'' +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                '}';
+    public ContactData(String firstname, String lastname, String phonenumber, String email, String group) {
+        this.id = null;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.phonenumber = phonenumber;
+        this.email = email;
+        this.group = group;
     }
 
     public ContactData(String id, String firstname, String lastname, String phonenumber, String email, String group) {

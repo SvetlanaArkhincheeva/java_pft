@@ -75,17 +75,35 @@ public class ContactHelper extends HelperBase {
     }
 
     public List<ContactData> getContactList() {
-        List<ContactData> contacts = new ArrayList<ContactData>();
-        List<WebElement> elements = wd.findElements(By.name("selected[]"));
+        /*List<ContactData> contacts = new ArrayList<ContactData>();
+        List<WebElement> elements =wd.findElements(By.name("entry"));
         for (WebElement element : elements) {
-            String firstname = element.getText();
-            String lastname = element.getText();
-            String id = wd.findElement(By.tagName("input")).getAttribute("value");
+            List <WebElement> cells = wd.findElements(By.tagName("td"));
+            String firstname  = cells.get(1).getText();
+            String lastname = cells.get(2).getText();
+            String id =(wd.findElement(By.tagName("input")).getAttribute("value"));
             ContactData contact = new ContactData(id, firstname, lastname, null, null, null);
             contacts.add(contact);
+        }*/
+
+        List<ContactData> contacts = new ArrayList<ContactData>();
+
+        List<WebElement> elements = wd.findElements(By.name("entry"));
+
+        for (WebElement element : elements) {
+
+            String firstname = element.findElement(By.xpath(".//td[3]")).getText();
+
+            String lastname = element.findElement(By.xpath(".//td[2]")).getText();
+
+            String id = element.findElement(By.tagName("input")).getAttribute("value");
+            ContactData contact = new ContactData(id, firstname, lastname, null, null, null);
+
+           // ContactData contact = new ContactData(id, firstName, lastName, null, null, null, null);
+
+            contacts.add(contact);
+
         }
         return contacts;
     }
 }
-
-
