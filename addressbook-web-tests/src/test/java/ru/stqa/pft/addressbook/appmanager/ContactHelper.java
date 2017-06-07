@@ -1,19 +1,14 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
-import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.testng.Assert.assertTrue;
 
 public class ContactHelper extends HelperBase {
 
@@ -52,12 +47,12 @@ public class ContactHelper extends HelperBase {
         wd.switchTo().alert().accept();
     }
 
-    public void initContactModification() {
-        click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]"));
+    public void initContactModification(int index) {
+        wd.findElement(By.xpath("//table[@id='maintable']/tbody/tr[" + (2 + index) + "]/td[8]/a/img")).click();
     }
 
     public void submitContactModification() {
-        click(By.xpath("//div[@id='content']/form[1]/input[22]"));
+        click(By.name("update"));
     }
 
     public void createContact(ContactData contact, boolean creation) {
@@ -71,7 +66,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public int getContactCount() {
-        return  wd.findElements(By.name("selected[]")).size();
+        return wd.findElements(By.name("selected[]")).size();
     }
 
     public List<ContactData> getContactList() {
@@ -91,7 +86,6 @@ public class ContactHelper extends HelperBase {
 
 
             contacts.add(contact);
-
         }
         return contacts;
     }
