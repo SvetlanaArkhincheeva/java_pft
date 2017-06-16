@@ -33,6 +33,7 @@ import java.util.List;
         type(By.name("email"), contactData.getEmail());
         type(By.name("email2"), contactData.getEmail2());
         type(By.name("email3"), contactData.getEmail3());
+        attach(By.name("photo"), contactData.getPhoto());
 
         if (creation) {
             new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
@@ -100,6 +101,7 @@ import java.util.List;
             String allPhones = element.findElements(By.tagName("td")).get(5).getText();
             String allEmails = element.findElements(By.tagName("td")).get(4).getText();
 
+
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
             contactCache.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname).withAddress(address).withAllPhones(allPhones).withAllEmails(allEmails));;
         }
@@ -135,6 +137,8 @@ import java.util.List;
         String email3 = wd.findElement(By.name("email3")).getAttribute("value");
 
         String address = wd.findElement(By.tagName("textarea")).getText();
+
+        String photo = wd.findElement(By.name("photo")).getAttribute("value");
 
         wd.navigate().back();
 
