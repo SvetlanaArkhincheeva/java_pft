@@ -1,6 +1,11 @@
 package ru.stqa.pft.addressbook.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("group")
 public class GroupData {
+
+
     public GroupData withId(int id) {
         this.id = id;
         return this;
@@ -47,7 +52,6 @@ public class GroupData {
     public int getId() {
         return id;
     }
-
 
     public String getName() {
         return name;

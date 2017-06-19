@@ -27,7 +27,7 @@ import java.util.List;
         type(By.name("firstname"), contactData.getFirstname());
         type(By.name("lastname"), contactData.getLastname());
         type(By.name("address"), contactData.getAddress());
-        type(By.name("home"), contactData.getPhonenumber());
+        type(By.name("home"), contactData.getHomephone());
         type(By.name("mobile"), contactData.getMobilephone());
         type(By.name("work"), contactData.getWorkphone());
         type(By.name("email"), contactData.getEmail());

@@ -1,35 +1,102 @@
 package ru.stqa.pft.addressbook.model;
 
+import com.google.gson.annotations.Expose;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import java.io.File;
-
 public class ContactData {
-    private int id  = Integer.MAX_VALUE;
-    private  String firstname;
-    private  String lastname;
-    private  String phonenumber;
-    private  String email;
-    private String group;
+
+    @XStreamOmitField
+    private int id = Integer.MAX_VALUE;
+
+    @Expose
+    private String firstname;
+
+    @Expose
+    private String lastname;
+
+    @Expose
     private String address;
+
+    @Expose
     private String homephone;
+
+    @Expose
     private String workphone;
+
+    @Expose
     private String mobilephone;
+
+    @Expose
+    private String email;
+
+    @Expose
     private String email2;
+
+    @Expose
     private String email3;
+
+    @Expose
+    private String group;
     private String allPhones;
     private String allEmails;
+
+    @Expose
     private File photo;
-
-    public File getPhoto() {
-        return photo;
-    }
-
-    public ContactData withPhoto(File photo) {
-        this.photo = photo;
-        return this;
-    }
 
     public int getId() {
         return id;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getHomephone() {
+        return homephone;
+    }
+
+    public String getWorkphone() {
+        return workphone;
+    }
+
+    public String getMobilephone() {
+        return mobilephone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getEmail2() {
+        return email2;
+    }
+
+    public String getEmail3() {
+        return email3;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public String getAllPhones() {
+        return allPhones;
+    }
+
+    public String getAllEmails() {
+        return allEmails;
+    }
+
+    public File getPhoto() {
+        return photo;
     }
 
     public ContactData withId(int id) {
@@ -37,54 +104,21 @@ public class ContactData {
         return this;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ContactData that = (ContactData) o;
-
-        if (id != that.id) return false;
-        if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null) return false;
-        return lastname != null ? lastname.equals(that.lastname) : that.lastname == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
-        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
-        return result;
-    }
-
     public ContactData withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
     }
+
+
 
     public ContactData withLastname(String lastname) {
         this.lastname = lastname;
         return this;
     }
 
-    public ContactData withPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
-        return this;
-    }
-
-    public ContactData withtEmail(String email) {
-        this.email = email;
-        return this;
-    }
-
-    public ContactData withGroup(String group) {
-        this.group = group;
-        return this;
-    }
     public ContactData withAddress(String address) {
         this.address = address;
         return this;
-
     }
 
     public ContactData withHomephone(String homephone) {
@@ -117,45 +151,42 @@ public class ContactData {
         return this;
     }
 
+    public ContactData withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+
     public ContactData withAllPhones(String allPhones) {
         this.allPhones = allPhones;
         return this;
     }
+
     public ContactData withAllEmails(String allEmails) {
         this.allEmails = allEmails;
         return this;
     }
-    public String getAllPhones() {
 
-        return allPhones;
-
+    public ContactData withPhoto(File photo) {
+        this.photo = photo;
+        return this;
     }
 
-    public String getFirstname() {
-        return firstname;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        if (id != that.id) return false;
+        if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null) return false;
+        return lastname != null ? lastname.equals(that.lastname) : that.lastname == null;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
-    public String getPhonenumber() {
-        return phonenumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-    public String getEmail2() {
-        return email2;
-    }
-
-    public String getEmail3() {
-        return email3;
-    }
-
-    public String getGroup() {
-        return group;
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
+        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
+        return result;
     }
 
     @Override
@@ -166,27 +197,4 @@ public class ContactData {
                 ", lastname='" + lastname + '\'' +
                 '}';
     }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getHomephone() {
-        return homephone;
-    }
-
-    public String getMobilephone() {
-        return mobilephone;
-    }
-
-    public String getWorkphone() {
-        return workphone;
-    }
-    public String getAllEmails() {
-
-        return allEmails;
-
-    }
-
-
 }
