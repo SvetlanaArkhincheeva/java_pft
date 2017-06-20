@@ -10,7 +10,6 @@
     <email2>test@test.ru 0</email2>
     <email3>test@test.ru 0</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 1</firstname>
@@ -23,7 +22,6 @@
     <email2>test@test.ru 1</email2>
     <email3>test@test.ru 1</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 2</firstname>
@@ -36,7 +34,6 @@
     <email2>test@test.ru 2</email2>
     <email3>test@test.ru 2</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 3</firstname>
@@ -49,7 +46,6 @@
     <email2>test@test.ru 3</email2>
     <email3>test@test.ru 3</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 4</firstname>
@@ -62,7 +58,6 @@
     <email2>test@test.ru 4</email2>
     <email3>test@test.ru 4</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 5</firstname>
@@ -75,7 +70,6 @@
     <email2>test@test.ru 5</email2>
     <email3>test@test.ru 5</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 6</firstname>
@@ -88,7 +82,6 @@
     <email2>test@test.ru 6</email2>
     <email3>test@test.ru 6</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 7</firstname>
@@ -101,7 +94,6 @@
     <email2>test@test.ru 7</email2>
     <email3>test@test.ru 7</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 8</firstname>
@@ -114,7 +106,6 @@
     <email2>test@test.ru 8</email2>
     <email3>test@test.ru 8</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 9</firstname>
@@ -127,7 +118,6 @@
     <email2>test@test.ru 9</email2>
     <email3>test@test.ru 9</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 10</firstname>
@@ -140,7 +130,6 @@
     <email2>test@test.ru 10</email2>
     <email3>test@test.ru 10</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 11</firstname>
@@ -153,7 +142,6 @@
     <email2>test@test.ru 11</email2>
     <email3>test@test.ru 11</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 12</firstname>
@@ -166,7 +154,6 @@
     <email2>test@test.ru 12</email2>
     <email3>test@test.ru 12</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 13</firstname>
@@ -179,7 +166,6 @@
     <email2>test@test.ru 13</email2>
     <email3>test@test.ru 13</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 14</firstname>
@@ -192,7 +178,6 @@
     <email2>test@test.ru 14</email2>
     <email3>test@test.ru 14</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 15</firstname>
@@ -205,7 +190,6 @@
     <email2>test@test.ru 15</email2>
     <email3>test@test.ru 15</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 16</firstname>
@@ -218,7 +202,6 @@
     <email2>test@test.ru 16</email2>
     <email3>test@test.ru 16</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 17</firstname>
@@ -231,7 +214,6 @@
     <email2>test@test.ru 17</email2>
     <email3>test@test.ru 17</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 18</firstname>
@@ -244,7 +226,6 @@
     <email2>test@test.ru 18</email2>
     <email3>test@test.ru 18</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
   <ru.stqa.pft.addressbook.model.ContactData>
     <firstname>Svetlana 19</firstname>
@@ -257,6 +238,5 @@
     <email2>test@test.ru 19</email2>
     <email3>test@test.ru 19</email3>
     <group>test1</group>
-    <photo>src\test\resources\img0.jpg</photo>
   </ru.stqa.pft.addressbook.model.ContactData>
 </list>
