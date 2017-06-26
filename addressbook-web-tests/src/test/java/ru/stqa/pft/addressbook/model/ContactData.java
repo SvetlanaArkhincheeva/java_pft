@@ -2,46 +2,66 @@ package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
+import javax.persistence.*;
 import java.io.File;
-public class ContactData {
 
+@Entity
+@Table(name = "addressbook")
+public class ContactData {
     @XStreamOmitField
+    @Id
+    @Column(name = "id")
     private int id = Integer.MAX_VALUE;
 
     @Expose
+    @Column(name = "firstname")
     private String firstname;
 
     @Expose
+    @Column(name = "lastname")
     private String lastname;
 
     @Expose
+    @Transient
     private String address;
 
     @Expose
+    @Column(name = "home")
+    @Type(type = "text")
     private String homephone;
 
     @Expose
+    @Column(name = "work")
+    @Type(type = "text")
     private String workphone;
 
     @Expose
+    @Column(name = "mobile")
+    @Type(type = "text")
     private String mobilephone;
 
     @Expose
+    @Transient
     private String email;
 
     @Expose
+    @Transient
     private String email2;
 
     @Expose
+    @Transient
     private String email3;
 
     @Expose
+    @Transient
     private String group;
-    private String allPhones;
-    private String allEmails;
 
-    @Expose
-    private File photo;
+    @Transient
+    private String allPhones;
+
+    @Transient
+    private String allEmails;
 
     public int getId() {
         return id;
@@ -95,10 +115,6 @@ public class ContactData {
         return allEmails;
     }
 
-    public File getPhoto() {
-        return photo;
-    }
-
     public ContactData withId(int id) {
         this.id = id;
         return this;
@@ -108,8 +124,6 @@ public class ContactData {
         this.firstname = firstname;
         return this;
     }
-
-
 
     public ContactData withLastname(String lastname) {
         this.lastname = lastname;
@@ -163,11 +177,6 @@ public class ContactData {
 
     public ContactData withAllEmails(String allEmails) {
         this.allEmails = allEmails;
-        return this;
-    }
-
-    public ContactData withPhoto(File photo) {
-        this.photo = photo;
         return this;
     }
 
