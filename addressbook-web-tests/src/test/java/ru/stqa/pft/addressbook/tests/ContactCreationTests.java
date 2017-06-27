@@ -52,22 +52,14 @@ public class ContactCreationTests extends TestBase {
         }
     }
 
-    @BeforeMethod
-    public void ensurePreconditions() {
-        app.goTo().groupPage();
-        if (app.group().all().isEmpty()) {
-            app.group().create(new GroupData().withName("Group Name"));
-        }
-    }
-
     @Test(dataProvider = "validContactsFromXml")
     public void testContactCreation(ContactData contact) {
         app.goTo().homePage();
-        Contacts before = app.contact().all();
+        Contacts before = app.db().contacts();
         app.contact().create(contact, true);
         app.goTo().homePage();
         assertThat(app.contact().count(), equalTo(before.size() + 1));
-        Contacts after = app.contact().all();
+        Contacts after = app.db().contacts();
         assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((cont) -> cont.getId()).max().getAsInt()))));
     }
 }

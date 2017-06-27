@@ -20,13 +20,16 @@ public class GroupData {
     @Id
     @Column(name = "group_id")
     private int id = Integer.MAX_VALUE;
+
     @Expose
     @Column(name = "group_name")
     private String name;
+
     @Expose
     @Column(name = "group_header")
     @Type(type = "text")
     private String header;
+
     @Expose
     @Column(name = "group_footer")
     @Type(type = "text")
@@ -38,15 +41,12 @@ public class GroupData {
     public String getName() {
         return name;
     }
-
     public String getHeader() {
         return header;
     }
-
     public String getFooter() {
         return footer;
     }
-
     public GroupData withId(int id) {
         this.id = id;
         return this;
@@ -67,10 +67,6 @@ public class GroupData {
         return this;
     }
 
-
-
-
-
     @Override
     public String toString() {
         return "GroupData{" +
@@ -87,13 +83,17 @@ public class GroupData {
         GroupData groupData = (GroupData) o;
 
         if (id != groupData.id) return false;
-        return name != null ? name.equals(groupData.name) : groupData.name == null;
+        if (name != null ? !name.equals(groupData.name) : groupData.name != null) return false;
+        if (header != null ? !header.equals(groupData.header) : groupData.header != null) return false;
+        return footer != null ? footer.equals(groupData.footer) : groupData.footer == null;
     }
 
     @Override
     public int hashCode() {
         int result = id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (header != null ? header.hashCode() : 0);
+        result = 31 * result + (footer != null ? footer.hashCode() : 0);
         return result;
     }
 }
