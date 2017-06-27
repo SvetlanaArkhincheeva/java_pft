@@ -52,7 +52,6 @@ public class GroupHelper extends HelperBase {
         returnToGroupPage();
     }
 
-
     public void selectGroupById(int id) {
         wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
@@ -83,7 +82,6 @@ public class GroupHelper extends HelperBase {
 
     private Groups groupCache = null;
 
-
     public Groups all() {
         if (groupCache != null) {
             return new Groups(groupCache);
@@ -97,6 +95,4 @@ public class GroupHelper extends HelperBase {
         }
         return new Groups(groupCache);
     }
-
-
 }

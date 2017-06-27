@@ -8,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 
-
 public class HelperBase {
     protected WebDriver wd;
 

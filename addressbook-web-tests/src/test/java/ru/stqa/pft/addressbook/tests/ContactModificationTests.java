@@ -12,7 +12,7 @@ public class ContactModificationTests extends TestBase {
     public void ensurePreconditions() {
         if (app.contact().all().size() == 0) {
             app.goTo().homePage();
-            app.contact().create(new ContactData().withFirstname("test1").withAddress("11").withHomephone("1").withMobilephone("1").withWorkphone("1").withEmail("1").withEmail2("1").withEmail3("222"), true);
+            app.contact().create(new ContactData().withFirstname("test1").withAddress("11").withHomephone("1").withMobilephone("1").withWorkphone("1").withEmail("1").withEmail2("1").withEmail3("222"));
         }
     }
 
