@@ -5,42 +5,44 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
-import java.util.ArrayList;
-import java.util.List;
+import ru.stqa.pft.addressbook.model.Groups;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+
 public class AddContactToGroup extends TestBase {
+
     @BeforeMethod
     public void ensurePreconditions() {
         app.goTo().groupPage();
         if (app.group().all().isEmpty()) {
-            app.group().create(new GroupData().withName("Group Name"));
+            app.group().create(new GroupData()
+                    .withName("test1"));
         }
 
         app.goTo().homePage();
-
         if (app.contact().all().isEmpty()) {
+            app.contact().create(new ContactData()
+                    .withFirstname("Svetlana")
+                    .withLastname("Arkhincheeva"));
+        }
 
-            app.contact().create(new ContactData().withFirstname("Svetlana").withLastname("Arkhincheeva").withAddress("Lenina street").withMobilephone("54").withEmail("dfdf@sdd.ru"));
+        if (app.db().contactInGroup().isEmpty()) {
+            app.contact().create(new ContactData()
+                    .withFirstname("Svetlana")
+                    .withLastname("Arkhincheeva"));
         }
     }
 
     @Test
-    public void AddContact() {
-        app.goTo().homePage();
+    public void testAddContactToGroup() {
         Contacts before = app.db().contacts();
-        ContactData rowWithContact = null;
-        List<ContactData> list = new ArrayList<ContactData>(before);
-        for (int i = 0; i < list.size(); i++) {
-            rowWithContact = list.get(i);
-
-        }
-        app.contact().contactToGroup(rowWithContact);
         app.goTo().homePage();
+        Groups group = app.db().groups();
+        ContactData modifiedContact = app.db().contactInGroup().iterator().next();
+        GroupData addedGroup = group.iterator().next();
+        app.contact().selectContact(modifiedContact.getId());
+        app.contact().addContactToGroup(addedGroup.getId());
         Contacts after = app.db().contacts();
-        ContactData contactFromDb = app.db().contactById(rowWithContact.getId());
-        assertThat(after, equalTo(before.without(rowWithContact).withAdded(contactFromDb)));
+        assertThat(after, equalTo(before.without(modifiedContact).withAdded(modifiedContact.inGroup(addedGroup))));
     }
 }
-
-

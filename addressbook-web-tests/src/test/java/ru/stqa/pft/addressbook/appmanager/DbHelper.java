@@ -15,7 +15,7 @@ public class DbHelper {
     private final SessionFactory sessionFactory;
     public DbHelper() {
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure() // configures settings from hibernate.cfg.xml
+                .configure() 
                 .build();
         sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
     }
@@ -35,7 +35,6 @@ public class DbHelper {
         session.getTransaction().commit();
         session.close();
         return new Contacts(result);
-
     }
 
     public GroupData groupById(int id){
@@ -54,5 +53,28 @@ public class DbHelper {
         session.getTransaction().commit();
         session.close();
         return contact;
+    }
+    public Contacts contactInGroup() {
+        Contacts result = new Contacts();
+        Groups groupsFull = groups();
+        Contacts contactsFull = contacts();
+        for (ContactData contact : contactsFull) {
+            if (contact.getGroups().size() < groupsFull.size()) {
+
+               result.add(contact);
+            }
+        }
+        return new Contacts(result);
+    }
+
+    public Contacts contactNotInGroup() {
+        Contacts result = new Contacts();
+        Contacts contacts = contacts();
+        for (ContactData contact : contacts) {
+            if (contact.getGroups().size() > 0) {
+                result.add(contact);
+            }
+        }
+        return new Contacts(result);
     }
 }

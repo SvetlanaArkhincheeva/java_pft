@@ -9,32 +9,43 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RemoveContactFromGroup extends TestBase {
-
     @BeforeMethod
     public void ensurePreconditions() {
         app.goTo().groupPage();
         if (app.group().all().isEmpty()) {
-            app.group().create(new GroupData().withName("Group Name"));
+            app.group().create(new GroupData()
+                    .withName("test1"));
         }
-
         app.goTo().homePage();
         if (app.contact().all().isEmpty()) {
-            app.contact().create(new ContactData().withFirstname("Svetlana").withLastname("Arkhincheeva").withAddress("Lenina street").withMobilephone("54").withEmail("dfdf@sdd.ru"));
+            app.contact().create(new ContactData()
+                    .withFirstname("Svetlana")
+                    .withLastname("Arkhincheeva"));
+        }
+
+        if (app.db().contactsAreInGroup().isEmpty()) {
+            app.goTo().homePage();
+            Groups group = app.db().groups();
+            ContactData modifiedContact = app.db().contactInGroup().iterator().next();
+            GroupData addedGroup = group.iterator().next();
+            app.contact().selectContact(modifiedContact.getId());
+            app.contact().addContactToGroup(addedGroup.getId());
         }
     }
 
     @Test
-    public void testRemoveContactFromGroup(){
+    public void testRemoveContactFromGroup() {
+        app.goTo().homePage();
         Groups groups = app.db().groups();
         Contacts before = app.db().contacts();
         app.goTo().homePage();
-        for (GroupData group: groups){
+        for (GroupData group : groups) {
             app.contact().selectDeletedGroupFromList(group);
         }
-        Contacts contacts = app.contact().all();
+        Contacts contacts = app.db().contacts();
         ContactData initContact = app.db().contactById(contacts.iterator().next().getId());
-        app.contact().deleteContactFromGroup(initContact);
         app.goTo().homePage();
+        app.contact().deleteContactFromGroup(initContact);
         Contacts after = app.db().contacts();
         ContactData contactFromDb = app.db().contactById(initContact.getId());
         assertThat(after, equalTo(before.without(initContact).withAdded(contactFromDb)));
