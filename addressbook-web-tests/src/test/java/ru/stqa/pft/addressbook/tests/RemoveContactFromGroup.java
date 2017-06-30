@@ -23,10 +23,10 @@ public class RemoveContactFromGroup extends TestBase {
                     .withLastname("Arkhincheeva"));
         }
 
-        if (app.db().contactsAreInGroup().isEmpty()) {
+        if (app.db().contactAreInGroup().isEmpty()) {
             app.goTo().homePage();
             Groups group = app.db().groups();
-            ContactData modifiedContact = app.db().contactInGroup().iterator().next();
+            ContactData modifiedContact = app.db().contactAreInGroup().iterator().next();
             GroupData addedGroup = group.iterator().next();
             app.contact().selectContact(modifiedContact.getId());
             app.contact().addContactToGroup(addedGroup.getId());

@@ -119,14 +119,6 @@ public class ContactData {
         return allEmails;
     }
 
-    public File getPhoto() {
-        if (photo == null) {
-            return null;
-        } else {
-            return new File(photo);
-        }
-    }
-
     public ContactData withId(int id) {
         this.id = id;
         return this;
@@ -184,11 +176,6 @@ public class ContactData {
 
     public ContactData withAllEmails(String allEmails) {
         this.allEmails = allEmails;
-        return this;
-    }
-
-    public ContactData withPhoto(File photo) {
-        this.photo = photo.getPath();
         return this;
     }
 

@@ -54,20 +54,20 @@ public class DbHelper {
         session.close();
         return contact;
     }
-    public Contacts contactInGroup() {
+    public Contacts contactNotInGroup() {
         Contacts result = new Contacts();
         Groups groupsFull = groups();
         Contacts contactsFull = contacts();
         for (ContactData contact : contactsFull) {
             if (contact.getGroups().size() < groupsFull.size()) {
-
-               result.add(contact);
+                result.add(contact);
             }
         }
         return new Contacts(result);
     }
 
-    public Contacts contactNotInGroup() {
+
+    public Contacts contactAreInGroup() {
         Contacts result = new Contacts();
         Contacts contacts = contacts();
         for (ContactData contact : contacts) {
