@@ -58,7 +58,6 @@
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-http:9.4.3.v20170317" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-util:9.4.3.v20170317" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-io:9.4.3.v20170317" level="project" />
-    <orderEntry type="module" module-name="addressbook-web-tests_test" scope="TEST" />
   </component>
   <component name="TestModuleProperties" production-module="mantis-tests_main" />
 </module>
