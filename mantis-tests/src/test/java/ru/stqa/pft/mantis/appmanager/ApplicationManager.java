@@ -1,26 +1,15 @@
 package ru.stqa.pft.mantis.appmanager;
+
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import org.openqa.selenium.ie.InternetExplorerDriver;
-
 import org.openqa.selenium.remote.BrowserType;
-
-
-
 import java.io.File;
-
 import java.io.FileReader;
-
 import java.io.IOException;
-
 import java.util.Objects;
-
 import java.util.Properties;
-
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -30,6 +19,10 @@ public class ApplicationManager {
     private RegistrationHelper registrationHelper;
     private FtpHelper ftp;
     private MailHelper mailHelper;
+    private JamesHelper jamesHelper;
+    private PasswordChangeHelper userHelper;
+    private NavigationHelper navigationHelper;
+    private HelperBase helperBase;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -90,4 +83,33 @@ public class ApplicationManager {
         }
         return mailHelper;
     }
+
+    public JamesHelper james() {
+        if (jamesHelper == null) {
+            jamesHelper = new JamesHelper(this);
+        }
+        return jamesHelper;
+    }
+
+    public PasswordChangeHelper user() {
+        if (userHelper == null) {
+            userHelper = new PasswordChangeHelper(this);
+        }
+        return userHelper;
+    }
+
+    public NavigationHelper navigation() {
+        if (navigationHelper == null) {
+            navigationHelper = new NavigationHelper(this);
+        }
+        return navigationHelper;
+    }
+
+    public HelperBase helper() {
+        if (helperBase == null) {
+            helperBase = new HelperBase(this);
+        }
+        return helperBase;
+    }
+
 }

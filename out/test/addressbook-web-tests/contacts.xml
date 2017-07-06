@@ -1,0 +1,242 @@
+<list>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 0</firstname>
+    <lastname>Arkhincheeva 0</lastname>
+    <address>Novosibirsk 0</address>
+    <homephone>+3656666 0</homephone>
+    <workphone>+8995666 0</workphone>
+    <mobilephone>8913333636 0</mobilephone>
+    <email>test@test.ru 0</email>
+    <email2>test@test.ru 0</email2>
+    <email3>test@test.ru 0</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 1</firstname>
+    <lastname>Arkhincheeva 1</lastname>
+    <address>Novosibirsk 1</address>
+    <homephone>+3656666 1</homephone>
+    <workphone>+8995666 1</workphone>
+    <mobilephone>8913333636 1</mobilephone>
+    <email>test@test.ru 1</email>
+    <email2>test@test.ru 1</email2>
+    <email3>test@test.ru 1</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 2</firstname>
+    <lastname>Arkhincheeva 2</lastname>
+    <address>Novosibirsk 2</address>
+    <homephone>+3656666 2</homephone>
+    <workphone>+8995666 2</workphone>
+    <mobilephone>8913333636 2</mobilephone>
+    <email>test@test.ru 2</email>
+    <email2>test@test.ru 2</email2>
+    <email3>test@test.ru 2</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 3</firstname>
+    <lastname>Arkhincheeva 3</lastname>
+    <address>Novosibirsk 3</address>
+    <homephone>+3656666 3</homephone>
+    <workphone>+8995666 3</workphone>
+    <mobilephone>8913333636 3</mobilephone>
+    <email>test@test.ru 3</email>
+    <email2>test@test.ru 3</email2>
+    <email3>test@test.ru 3</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 4</firstname>
+    <lastname>Arkhincheeva 4</lastname>
+    <address>Novosibirsk 4</address>
+    <homephone>+3656666 4</homephone>
+    <workphone>+8995666 4</workphone>
+    <mobilephone>8913333636 4</mobilephone>
+    <email>test@test.ru 4</email>
+    <email2>test@test.ru 4</email2>
+    <email3>test@test.ru 4</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 5</firstname>
+    <lastname>Arkhincheeva 5</lastname>
+    <address>Novosibirsk 5</address>
+    <homephone>+3656666 5</homephone>
+    <workphone>+8995666 5</workphone>
+    <mobilephone>8913333636 5</mobilephone>
+    <email>test@test.ru 5</email>
+    <email2>test@test.ru 5</email2>
+    <email3>test@test.ru 5</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 6</firstname>
+    <lastname>Arkhincheeva 6</lastname>
+    <address>Novosibirsk 6</address>
+    <homephone>+3656666 6</homephone>
+    <workphone>+8995666 6</workphone>
+    <mobilephone>8913333636 6</mobilephone>
+    <email>test@test.ru 6</email>
+    <email2>test@test.ru 6</email2>
+    <email3>test@test.ru 6</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 7</firstname>
+    <lastname>Arkhincheeva 7</lastname>
+    <address>Novosibirsk 7</address>
+    <homephone>+3656666 7</homephone>
+    <workphone>+8995666 7</workphone>
+    <mobilephone>8913333636 7</mobilephone>
+    <email>test@test.ru 7</email>
+    <email2>test@test.ru 7</email2>
+    <email3>test@test.ru 7</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 8</firstname>
+    <lastname>Arkhincheeva 8</lastname>
+    <address>Novosibirsk 8</address>
+    <homephone>+3656666 8</homephone>
+    <workphone>+8995666 8</workphone>
+    <mobilephone>8913333636 8</mobilephone>
+    <email>test@test.ru 8</email>
+    <email2>test@test.ru 8</email2>
+    <email3>test@test.ru 8</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 9</firstname>
+    <lastname>Arkhincheeva 9</lastname>
+    <address>Novosibirsk 9</address>
+    <homephone>+3656666 9</homephone>
+    <workphone>+8995666 9</workphone>
+    <mobilephone>8913333636 9</mobilephone>
+    <email>test@test.ru 9</email>
+    <email2>test@test.ru 9</email2>
+    <email3>test@test.ru 9</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 10</firstname>
+    <lastname>Arkhincheeva 10</lastname>
+    <address>Novosibirsk 10</address>
+    <homephone>+3656666 10</homephone>
+    <workphone>+8995666 10</workphone>
+    <mobilephone>8913333636 10</mobilephone>
+    <email>test@test.ru 10</email>
+    <email2>test@test.ru 10</email2>
+    <email3>test@test.ru 10</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 11</firstname>
+    <lastname>Arkhincheeva 11</lastname>
+    <address>Novosibirsk 11</address>
+    <homephone>+3656666 11</homephone>
+    <workphone>+8995666 11</workphone>
+    <mobilephone>8913333636 11</mobilephone>
+    <email>test@test.ru 11</email>
+    <email2>test@test.ru 11</email2>
+    <email3>test@test.ru 11</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 12</firstname>
+    <lastname>Arkhincheeva 12</lastname>
+    <address>Novosibirsk 12</address>
+    <homephone>+3656666 12</homephone>
+    <workphone>+8995666 12</workphone>
+    <mobilephone>8913333636 12</mobilephone>
+    <email>test@test.ru 12</email>
+    <email2>test@test.ru 12</email2>
+    <email3>test@test.ru 12</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 13</firstname>
+    <lastname>Arkhincheeva 13</lastname>
+    <address>Novosibirsk 13</address>
+    <homephone>+3656666 13</homephone>
+    <workphone>+8995666 13</workphone>
+    <mobilephone>8913333636 13</mobilephone>
+    <email>test@test.ru 13</email>
+    <email2>test@test.ru 13</email2>
+    <email3>test@test.ru 13</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 14</firstname>
+    <lastname>Arkhincheeva 14</lastname>
+    <address>Novosibirsk 14</address>
+    <homephone>+3656666 14</homephone>
+    <workphone>+8995666 14</workphone>
+    <mobilephone>8913333636 14</mobilephone>
+    <email>test@test.ru 14</email>
+    <email2>test@test.ru 14</email2>
+    <email3>test@test.ru 14</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 15</firstname>
+    <lastname>Arkhincheeva 15</lastname>
+    <address>Novosibirsk 15</address>
+    <homephone>+3656666 15</homephone>
+    <workphone>+8995666 15</workphone>
+    <mobilephone>8913333636 15</mobilephone>
+    <email>test@test.ru 15</email>
+    <email2>test@test.ru 15</email2>
+    <email3>test@test.ru 15</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 16</firstname>
+    <lastname>Arkhincheeva 16</lastname>
+    <address>Novosibirsk 16</address>
+    <homephone>+3656666 16</homephone>
+    <workphone>+8995666 16</workphone>
+    <mobilephone>8913333636 16</mobilephone>
+    <email>test@test.ru 16</email>
+    <email2>test@test.ru 16</email2>
+    <email3>test@test.ru 16</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 17</firstname>
+    <lastname>Arkhincheeva 17</lastname>
+    <address>Novosibirsk 17</address>
+    <homephone>+3656666 17</homephone>
+    <workphone>+8995666 17</workphone>
+    <mobilephone>8913333636 17</mobilephone>
+    <email>test@test.ru 17</email>
+    <email2>test@test.ru 17</email2>
+    <email3>test@test.ru 17</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 18</firstname>
+    <lastname>Arkhincheeva 18</lastname>
+    <address>Novosibirsk 18</address>
+    <homephone>+3656666 18</homephone>
+    <workphone>+8995666 18</workphone>
+    <mobilephone>8913333636 18</mobilephone>
+    <email>test@test.ru 18</email>
+    <email2>test@test.ru 18</email2>
+    <email3>test@test.ru 18</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Svetlana 19</firstname>
+    <lastname>Arkhincheeva 19</lastname>
+    <address>Novosibirsk 19</address>
+    <homephone>+3656666 19</homephone>
+    <workphone>+8995666 19</workphone>
+    <mobilephone>8913333636 19</mobilephone>
+    <email>test@test.ru 19</email>
+    <email2>test@test.ru 19</email2>
+    <email3>test@test.ru 19</email3>
+    <group>test1</group>
+  </ru.stqa.pft.addressbook.model.ContactData>
+</list>

@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-
 import java.io.File;
 
 public class HelperBase {
@@ -54,5 +53,9 @@ public class HelperBase {
         } catch (NoSuchElementException ex) {
             return false;
         }
+    }
+
+    public void select(String username){
+        click(By.linkText("user1499160159474"));
     }
 }
