@@ -35,6 +35,7 @@ public class PasswordChangeTests extends TestBase {
         assertTrue(sessionUser.login(user, newPass));
     }
 
+
     @AfterMethod(alwaysRun = true)
     public void stopMailServer() {
         app.mail().stop();
