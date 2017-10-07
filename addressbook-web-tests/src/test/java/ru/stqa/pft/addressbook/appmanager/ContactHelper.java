@@ -133,8 +133,12 @@ public class ContactHelper extends HelperBase {
                 .withEmail3(email3);
     }
 
+
     public void selectContactById(int id) {
-        wd.findElement(By.xpath("//input[@value='"+id+"']")).click();
+        wd.findElement(By.xpath("//*[@value='"+id+"']")).click();
+
+
+        //wd.findElement(By.xpath("//input[@value='"+id+"']")).click();
     }
 
     public void deleteContactFromGroup(ContactData contact) {
@@ -144,6 +148,7 @@ public class ContactHelper extends HelperBase {
 
     public void selectDeletedGroupFromList(GroupData group){
         new Select(wd.findElement(By.xpath("//select[@name = 'group']"))).selectByVisibleText(group.getName());
+
     }
 
     public void selectContact(int id) {

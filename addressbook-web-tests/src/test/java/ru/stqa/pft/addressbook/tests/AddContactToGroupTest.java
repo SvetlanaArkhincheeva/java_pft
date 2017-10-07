@@ -16,6 +16,44 @@ public class AddContactToGroupTest extends TestBase {
         app.goTo().groupPage();
         if (app.group().all().isEmpty()) {
             app.group().create(new GroupData()
+                    .withName("Sveta test"));
+        }
+        app.goTo().homePage();
+        if (app.contact().all().isEmpty()) {
+            app.contact().create(new ContactData()
+                    .withFirstname("Denis")
+                    .withLastname("Volynkin"));
+        }
+
+       if (app.db().contactNotInGroup().isEmpty()) {
+            app.contact().create(new ContactData()
+                    .withFirstname("Anton ")
+                    .withLastname("Arkhincheev"));
+
+        }
+    }
+
+    @Test
+    public void testAddContactToGroup() {
+        Contacts before = app.db().contacts();
+        app.goTo().homePage();
+        Groups group = app.db().groups();
+        ContactData modifiedContact = app.db().contactNotInGroup().iterator().next();
+        GroupData addedGroup = group.iterator().next();
+        app.contact().selectContact(modifiedContact.getId());
+        app.contact().addContactToGroup(addedGroup.getId());
+        Contacts after = app.db().contacts();
+        assertThat(after, equalTo(before.without(modifiedContact).withAdded(modifiedContact.inGroup(addedGroup))));
+    }
+}
+
+/*public class AddContactToGroupTest extends TestBase {
+
+    @BeforeMethod
+    public void ensurePreconditions() {
+        app.goTo().groupPage();
+        if (app.group().all().isEmpty()) {
+            app.group().create(new GroupData()
                     .withName("test1"));
         }
 
@@ -26,12 +64,12 @@ public class AddContactToGroupTest extends TestBase {
                     .withLastname("Arkhincheeva"));
         }
 
-        /*if (app.db().contactNotInGroup().isEmpty()) {
+        if (app.db().contactNotInGroup().isEmpty()) {
             app.contact().create(new ContactData()
                     .withFirstname("Svetlana")
                     .withLastname("Arkhincheeva"));
-        }*/
-        /*app.goTo().homePage();
+        }
+        app.goTo().homePage();
         if (app.db().contactNotInGroup().isEmpty()) {
             app.goTo().groupPage();
             app.group().create(new GroupData().withName("testtest"));
@@ -39,7 +77,7 @@ public class AddContactToGroupTest extends TestBase {
             app.contact().create(new ContactData()
                     .withFirstname("Test")
                     .withLastname("test2"));
-        }*/
+        }
 
     }
 
@@ -65,3 +103,4 @@ public class AddContactToGroupTest extends TestBase {
         assertThat(after, equalTo(before.without(modifiedContact).withAdded(modifiedContact.inGroup(addedGroup))));
     }
 }
+*/
