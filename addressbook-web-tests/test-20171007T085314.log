@@ -1298,3 +1298,4 @@
 8318 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 8318 [main] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 498884 [pool-1-thread-1] DEBUG o.h.e.j.c.i.DriverManagerConnectionProviderImpl - Connection pool now considered primed; min-size will be maintained
+4613453 [main] INFO  r.s.pft.addressbook.tests.TestBase - Stop testtestRemoveContactFromGroup

@@ -1,4 +1,5 @@
 package ru.stqa.pft.mantis.appmanager;
+
 import org.openqa.selenium.By;
 
 public class RegistrationHelper extends HelperBase{
@@ -18,6 +19,7 @@ public class RegistrationHelper extends HelperBase{
         wd.get(confirmationLink);
         type(By.name("password"), password);
         type(By.name("password_confirm"), password);
-        click(By.cssSelector("input[value='Update User']"));
+
+        click(By.xpath("//*[@id=\"account-update-form\"]/fieldset/span/button/span"));
     }
 }

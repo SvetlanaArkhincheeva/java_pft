@@ -2,6 +2,7 @@ package ru.stqa.pft.mantis.appmanager;
 
 import org.apache.commons.net.telnet.TelnetClient;
 import ru.stqa.pft.mantis.model.MailMessage;
+
 import javax.mail.*;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,10 +29,25 @@ public class JamesHelper {
         mailSession = Session.getDefaultInstance(System.getProperties());
     }
 
+    public boolean doesUserExist(String name) {
+        initTelnetSession();
+        write("verify " + name);
+        String result = readUntil("exist");
+        closeTelnetSession();
+        return result.trim().equals("User " + name + " exist");
+    }
+
     public void createUser(String name, String passwd) {
         initTelnetSession();
         write("adduser " + name + " " + passwd);
         String result = readUntil("User " + name + " added");
+        closeTelnetSession();
+    }
+
+    public void deleteUser(String name) {
+        initTelnetSession();
+        write("deluser " + name);
+        String result = readUntil("User " + name + " deleted");
         closeTelnetSession();
     }
 
@@ -51,14 +67,19 @@ public class JamesHelper {
             e.printStackTrace();
         }
 
+        // Don't know why it doesn't allow login at the first attempt
         readUntil("Login id:");
         write("");
         readUntil("Password:");
         write("");
+
+        // Second login attempt, must be successful
         readUntil("Login id:");
         write(login);
         readUntil("Password:");
         write(password);
+
+        // Read welcome message
         readUntil("Welcome "+login+". HELP for a list of commands");
     }
 
