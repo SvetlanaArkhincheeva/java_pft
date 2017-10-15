@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c60ed4-3027-407d-8670-df160fc696c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/remote.properties" afterPath="$PROJECT_DIR$/src/test/resources/remote.properties" />
     </list>
     <ignored path="addressbook-web-tests.iws" />
@@ -90,8 +90,8 @@
       <file leaf-file-name="remote.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/resources/remote.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -1537,8 +1537,8 @@
     <history-entry file="GroupModificationTests - 2017.10.15 at 10h 21m 44s.xml">
       <configuration name="GroupModificationTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RegistrationTests - 2017.10.07 at 12h 33m 04s.xml">
-      <configuration name="RegistrationTests" configurationId="TestNG" />
+    <history-entry file="GroupModificationTests - 2017.10.15 at 11h 02m 35s.xml">
+      <configuration name="GroupModificationTests" configurationId="TestNG" />
     </history-entry>
     <history-entry file="RegistrationTests - 2017.10.07 at 12h 33m 55s.xml">
       <configuration name="RegistrationTests" configurationId="TestNG" />
@@ -1947,14 +1947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -1963,10 +1955,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/remote.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
