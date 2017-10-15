@@ -24,7 +24,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void fillContactForm(ContactData contactData, boolean creation) {
-        type(By.xpath("//form[@name=\"theform\"]//input[@name=\"firstname\"]"), contactData.getFirstname());
+        type(By.name("firstname"), contactData.getFirstname());
         type(By.name("lastname"), contactData.getLastname());
         type(By.name("address"), contactData.getAddress());
         type(By.name("home"), contactData.getHomephone());
@@ -135,6 +135,7 @@ public class ContactHelper extends HelperBase {
 
 
     public void selectContactById(int id) {
+
         wd.findElement(By.xpath("//*[@value='"+id+"']")).click();
 
 
