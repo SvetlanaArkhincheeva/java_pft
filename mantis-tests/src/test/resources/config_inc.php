@@ -1,4 +1,4 @@
-web.baseUrl = http://localhost/mantis/
+web.baseUrl = http://localhost/mantisbt-1.2.19/
 web.adminLogin = administrator
 web.adminPass = root
 
