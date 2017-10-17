@@ -19,8 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="soap-sample_main" target="1.9" />
-      <module name="soap-sample_test" target="1.9" />
+      <module name="soap-sample_main" target="1.8" />
+      <module name="soap-sample_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
